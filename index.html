@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Мир мопсов — маленькие собаки с большим сердцем</title>
+<style>
+:root{--ink:#f6f0ff;--muted:#b8a9cb;--cream:#080610;--peach:#c77dff;--orange:#a83cff;--brown:#d9b4ff;--card:#151020}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}a{transition:.2s} .pug-art{border-radius:30px}
+header{position:sticky;top:0;z-index:5;background:#0d0917ee;backdrop-filter:blur(12px);border-bottom:1px solid #58218a}
+nav{max-width:1100px;margin:auto;padding:15px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-weight:900;font-size:1.25rem;color:#e3c5ff;letter-spacing:-.5px}.logo span{font-size:1.5rem;margin-right:7px}
+nav a{color:var(--ink);text-decoration:none;font-weight:700;font-size:.94rem;margin-left:20px}nav a:hover{color:var(--orange)}
+.hero{max-width:1100px;margin:0 auto;padding:72px 22px 62px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:35px}
+.eyebrow{color:var(--orange);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:.78rem}
+h1{font-size:clamp(2.7rem,6vw,5rem);line-height:1.02;letter-spacing:-3px;margin:15px 0 20px}
+.hero p{font-size:1.12rem;color:var(--muted);max-width:520px}
+.btn{display:inline-block;margin-top:18px;padding:14px 23px;background:var(--orange);color:white;text-decoration:none;border-radius:999px;font-weight:800;box-shadow:0 8px 20px #d9774530}.btn:hover{transform:translateY(-2px)}
+.pug-art{min-height:370px;border-radius:42% 58% 48% 52%/45% 42% 58% 55%;background:radial-gradient(circle at 50% 35%,#422064,#140b22 72%);border:1px solid #8d36d6;box-shadow:0 0 55px #8b2be955;display:grid;place-items:center;position:relative;overflow:hidden}
+.pug-face{display:block;width:100%;height:100%;min-height:370px;object-fit:cover;object-position:center 35%;filter:drop-shadow(0 16px 10px #0008);border-radius:inherit}
+.sticker{position:absolute;background:#21132f;color:#f5eaff;border:1px solid #9b43df;border-radius:18px;padding:11px 16px;font-weight:800;box-shadow:0 8px 25px #0008}.s1{top:12%;left:2%;transform:rotate(-7deg)}.s2{bottom:13%;right:1%;transform:rotate(6deg)}
+section{padding:65px 22px}.wrap{max-width:1100px;margin:auto}.section-head{text-align:center;max-width:650px;margin:0 auto 34px}.section-head h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-1.5px;margin:7px 0}.section-head p{color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--card);border:1px solid #54247a;border-radius:24px;padding:25px;box-shadow:0 10px 30px #0005}.emoji{font-size:2.6rem}.card h3{margin:10px 0 7px;font-size:1.2rem}.card p{color:var(--muted);margin:0}
+.facts{background:#100a1b;border-top:1px solid #32144d;border-bottom:1px solid #32144d}.fact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.fact{background:#1b1128;border:1px solid #54247a;border-radius:20px;padding:22px;text-align:center}.fact strong{display:block;font-size:2rem;color:var(--orange)}.fact span{font-size:.9rem;color:var(--muted)}
+.care-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.care{display:flex;gap:16px;background:#151020;border-radius:22px;padding:20px;border:1px solid #54247a}.care .emoji{font-size:2rem}.care p{margin:4px 0 0;color:var(--muted)}
+.note{margin-top:22px;background:#21132f;border-left:4px solid var(--orange);padding:18px 20px;border-radius:12px;color:#e8d7f8}
+.fun{background:linear-gradient(135deg,#170d25,#080610);border-top:1px solid #58218a;color:white;text-align:center}.fun .section-head p{color:#f0d9c8}.fun .btn{background:#f6c7a6;color:#4b3024}
+footer{text-align:center;padding:28px 20px;color:var(--muted);font-size:.9rem;background:#05040a;border-top:1px solid #32144d}
+.photo-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.photo-grid figure{margin:0;background:#151020;border:1px solid #7131a5;border-radius:18px;overflow:hidden;box-shadow:0 8px 28px #0006}.photo-grid img{display:block;width:100%;height:175px;object-fit:cover}.photo-grid figcaption{padding:10px 12px;font-weight:700;color:#e9d8ff;font-size:.9rem}.eyebrow{color:#c77dff}nav a:hover{color:#d6a2ff}.btn{background:linear-gradient(135deg,#bd55ff,#7c22cf);box-shadow:0 8px 24px #8b2be955}.btn:hover{filter:brightness(1.12)}
+@media(max-width:900px){.photo-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:760px){nav{flex-wrap:wrap}nav div:last-child{width:100%;display:flex;justify-content:space-between}nav a{margin:0;font-size:.85rem}.hero{grid-template-columns:1fr;padding-top:45px}.pug-art{min-height:290px}.grid{grid-template-columns:1fr}.fact-grid{grid-template-columns:repeat(2,1fr)}.care-grid{grid-template-columns:1fr}.photo-grid{grid-template-columns:repeat(2,1fr)}h1{letter-spacing:-2px}}
+</style>
+</head>
+<body>
+<header><nav><div class="logo"><span>🐾</span>МИР МОПСОВ</div><div><a href="#about">О породе</a><a href="#facts">Факты</a><a href="#care">Уход</a><a href="#gallery">Галерея</a><a href="#love">Почему мопсы?</a></div></nav></header>
+<main>
+<section class="hero" id="top">
+ <div><div class="eyebrow">Добро пожаловать в мир хвостиков</div><h1>Мопсы —<br>маленькие<br>комочки счастья</h1><p>Познакомься с забавными, ласковыми и очень преданными собаками, которые умеют превращать обычный день в праздник.</p><a class="btn" href="#about">Узнать о мопсах ↓</a></div>
+ <div class="pug-art" aria-label="Иллюстрация мопса"><img class="pug-face" src="pug-hero.jpg" alt="Мопс крупным планом"><div class="sticker s1">Люблю обнимашки!</div><div class="sticker s2">Мопс настроение ✨</div></div>
+</section>
+<section id="about"><div class="wrap"><div class="section-head"><div class="eyebrow">Знакомство</div><h2>Кто такие мопсы?</h2><p>Мопс — небольшая собака-компаньон с выразительными глазами, складочками на мордочке и дружелюбным характером.</p></div>
+<div class="grid">
+ <article class="card"><div class="emoji">🥰</div><h3>Характер</h3><p>Обычно мопсы общительные, ласковые и любят проводить время рядом с людьми.</p></article>
+ <article class="card"><div class="emoji">🎾</div><h3>Любимые занятия</h3><p>Игры, короткие прогулки, новые впечатления и уютный отдых рядом с семьёй.</p></article>
+ <article class="card"><div class="emoji">👀</div><h3>Внешность</h3><p>Крепкое компактное тело, короткая мордочка, большие глаза и закрученный хвост.</p></article>
+</div></div></section>
+<section class="facts" id="facts"><div class="wrap"><div class="section-head"><div class="eyebrow">Интересное</div><h2>Мопс в цифрах</h2><p>Несколько ориентиров о породе. У каждой собаки свои особенности.</p></div>
+<div class="fact-grid">
+ <div class="fact"><strong>6–8 кг</strong><span>частый диапазон веса взрослой собаки</span></div>
+ <div class="fact"><strong>25–33 см</strong><span>примерная высота в холке</span></div>
+ <div class="fact"><strong>Короткая</strong><span>шерсть, которая всё равно линяет</span></div>
+ <div class="fact"><strong>Дома</strong><span>мопсам важно быть рядом с семьёй</span></div>
+</div></div></section>
+<section id="care"><div class="wrap"><div class="section-head"><div class="eyebrow">Забота каждый день</div><h2>Как ухаживать за мопсом?</h2><p>Мопсам нужна внимательная забота — особенно из-за строения их короткой мордочки.</p></div>
+<div class="care-grid">
+ <div class="care"><div class="emoji">🧼</div><div><h3>Складочки и шерсть</h3><p>Аккуратно очищай и хорошо высушивай складки по рекомендации ветеринара. Регулярно вычёсывай шерсть.</p></div></div>
+ <div class="care"><div class="emoji">🌤️</div><div><h3>Жара — не для мопсов</h3><p>Из-за короткой мордочки им бывает трудно охлаждаться. Избегай перегрева и обеспечивай доступ к воде и прохладе.</p></div></div>
+ <div class="care"><div class="emoji">🦮</div><div><h3>Прогулки и игры</h3><p>Подойдут спокойные прогулки и умеренные игры. Следи за дыханием и не заставляй собаку продолжать, если ей тяжело.</p></div></div>
+ <div class="care"><div class="emoji">🩺</div><div><h3>Ветеринар</h3><p>Регулярные осмотры помогают следить за дыханием, глазами, кожей, зубами и общим самочувствием.</p></div></div>
+</div><div class="note"><strong>Важно:</strong> громкое или затруднённое дыхание не стоит считать нормой породы. При проблемах с дыханием, перегреве или необычной усталости обратись к ветеринару.</div>
+</div></section>
+<section id="gallery"><div class="wrap"><div class="section-head"><div class="eyebrow">Фотоальбом</div><h2>Галерея мопсов</h2><p>Пять милых моментов из жизни маленьких хвостатых друзей.</p></div><div class="photo-grid"><figure><img src="pug-garden.jpg" alt="Мопс на прогулке в саду"><figcaption>Прогулка в саду</figcaption></figure><figure><img src="pug-blanket.jpg" alt="Мопс уютно укутался в плед"><figcaption>Уютный вечер</figcaption></figure><figure><img src="pug-rest.jpg" alt="Отдыхающий мопс"><figcaption>Время отдыха</figcaption></figure><figure><img src="pug-grass.jpg" alt="Мопс на траве"><figcaption>Счастье на природе</figcaption></figure><figure><img src="pug-hood.jpg" alt="Мопс в мягком капюшоне"><figcaption>Модный хвостик</figcaption></figure></div></div></section>
+<section class="fun" id="love"><div class="wrap"><div class="section-head"><div class="eyebrow" style="color:#f6c7a6">Мопсовая любовь</div><h2>Маленький пёс — большое сердце ❤️</h2><p>Мопс может стать весёлым и преданным другом. Главное — выбирать ответственное содержание, заботиться о здоровье и помнить, что каждая собака заслуживает любви.</p><a class="btn" href="#top">Наверх ↑</a></div></div></section>
+</main>
+<footer>🐾 Сделано с любовью к мопсам · Мир мопсов</footer>
+</body></html>
